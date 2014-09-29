@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<?php setcookie('pseudo', time() + 365*24*3600, null, null, false, true); ?>
+
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="style photography.css" />
+<title>NikolasBricePhotography</title>
+
+</head>
+
+<body>
+
+<header>down with webster
+</header>
+
+<h1>NikolasBricePhotography
+</h1>
+
+<?php include("menu.php"); ?>
+
+<form action="minichat_post.php" method="post">
+    
+      <label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo" <?php echo $_COOKIE['pseudo']; ?> /><br /></p>
+      <label for="coordonnees">Coordonnees</label> : <input type="tel" name="Coordonnees" placeholder="Ex : 514 123 4567"/><br /></p>
+       
+        <label for="message">Message</label><br />
+        <textarea name="message" id="message" rows="10" cols="50" placeholder="Veuillez inscrire votre message ici. Maximum de 400 caractères."/></textarea>
+
+     <br />
+
+        <input type="submit" value="Envoyer" />
+  </p>
+    </form>
+
+<?php
+// Connexion à la base de données
+try
+{
+  $bdd = new PDO('mysql:host=localhost;dbname=minichat', 'root', 'root');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+// Récupération des 10 derniers messages
+$reponse = $bdd->query('SELECT pseudo, coordonnees, message FROM text ORDER BY ID DESC LIMIT 0, 10');
+
+// Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
+while ($donnees = $reponse->fetch())
+{
+  echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : ' . htmlspecialchars($donnees['message']) . '</p>';
+}
+
+$reponse->closeCursor();
+
+?>
+
+
+
+
+    </body>
+
+<?php include("footer.php"); ?>
+
+</html>
