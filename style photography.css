@@ -1,0 +1,159 @@
+p
+{
+    color: grey;
+	font-size: 16px;
+	text-align: center;
+}
+
+
+h1
+{
+    color: white;
+	font-size: 3em;
+	font-family: eraser;
+	text-align: center;
+	margin-top: 50px;
+		
+	}
+	
+h2
+{
+    color: red;
+	font-size: 2em;
+	font-family: impact, "Times New Roman", "Comic Sans MS", serif;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: center;
+	
+}
+
+h3
+{
+    color: white;
+	font-family: eraser;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	width: 40%;
+	margin: auto;
+	
+	
+	
+}
+
+nav
+{
+color: grey;
+float: center;
+font-family: eraser;
+border: 3px double;
+margin-bottom: 30px;
+width: auto;
+font-size: 0.9em;
+
+}
+
+.section1
+{
+margin-bottom: 30px;
+font-size: 0.9em;
+
+}
+
+nav ul
+{
+    list-style-type: none;
+    	text-align: center;
+
+
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: white;
+    padding-bottom: 3px;
+    text-decoration: none;
+
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+
+
+
+body
+{
+ 	background-image: url(tableau-noir.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover; 
+	-moz-background-size: 100% 100%;     /* Gecko 1.9.2 (Firefox 3.6) */
+	-o-background-size: 100% 100%;        /* Opera 9.5 */
+	-webkit-background-size: 100% 100%;   /* Safari 3.0 */
+	background-size: 100% 100%;           /* Gecko 2.0 (Firefox 4.0) > CSS3 */ 
+
+	}
+	
+@font-face 
+{
+	font-family: 'eraser';
+	src: url('eraser.eot') format('eot'),
+	url('eraser.woff') format('woff'),
+	url('eraser.ttf') format('truetype'),
+	url('eraser.svg') format('svg');
+
+}
+
+footer img
+{
+	width: 3.5em;
+	display: infinite-block;
+	
+	}
+	
+footer p
+{
+text-align: center;
+}
+
+    
+form
+{
+    color: grey;
+    font-family: eraser;
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	
+}
+
+object
+{
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+ul
+
+{
+     color: white;
+	text-align: center;
+	width: 40%;
+	margin: auto;
+	
+}
+
+
